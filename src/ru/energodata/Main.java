@@ -11,7 +11,7 @@ public class Main {
     public static void main(String[] args) {
         if (args.length != 2) {
             System.out.println("Usage: IndexExtractor <path to CHDPA .txt file> <path to result file");
-            System.out.println("Example: compareTXT C:\\_data\\KRYEMRYESPUBLIKA_POLNAYA.txt C:\\_data\\crimea_index.txt");
+            System.out.println("Example: IndexExtractor C:\\_data\\KRYEMRYESPUBLIKA_POLNAYA.txt C:\\_data\\crimea_index.txt");
         } else {
             try {
                 File inputFile = new File(args[0]);
@@ -38,7 +38,6 @@ public class Main {
             }
             catch (InvalidPathException |  NullPointerException ex) {
                 ex.printStackTrace();
-                System.out.println(args[0] + " is not correct file");
             }
         }
     }
